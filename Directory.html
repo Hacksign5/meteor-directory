@@ -1,0 +1,28 @@
+<template name="directory">
+  <h1>Directory</h1>
+  <div> <a href="{{pathFor 'new-item'}}">Add New Item</a> </div>
+  <table>
+    <th>Name</th>
+    <th>Phone Number</th>
+    <th>Address</th>
+    {{#each directory}}
+      {{> dirtr}}
+    {{/each}}
+  </table>
+</template>
+
+<template name="dirtr">
+  <tr>
+    <td>{{name}}</td>
+    <td>{{phone_number}}</td>
+    <td>{{address}}</td>
+  </tr>
+</template>
+
+<template name="new-item">
+  <form class="new-item">
+    <input type="text" name="name" placeholder="Enter name here" />
+    <input type="text" name="phone" placeholder="Enter Phone Number here" />
+    <input type="textarea" name="address" placeholder="Enter Address here" />
+  </form>
+</template>
