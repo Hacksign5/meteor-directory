@@ -16,10 +16,10 @@ Router.route('/directory', function () {
 });
 
 Router.route('/directory/new', {
-  name: 'new-item',
+  name: 'newItem',
   action: function() {
     this.render('header', {to:'header'});
-    this.render('new-item');
+    this.render('newItem');
     this.render('footer', {to:'footer'});
   }
 });

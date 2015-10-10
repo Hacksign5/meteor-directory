@@ -1,6 +1,6 @@
 <template name="directory">
   <h1>Directory</h1>
-  <div> <a href="{{pathFor 'new-item'}}">Add New Item</a> </div>
+  <div><a href="{{pathFor 'newItem'}}">Add New Item</a></div>
   <table>
     <th>Name</th>
     <th>Phone Number</th>
@@ -19,10 +19,11 @@
   </tr>
 </template>
 
-<template name="new-item">
-  <form class="new-item">
+<template name="newItem">
+  <form class="newItem">
     <input type="text" name="name" placeholder="Enter name here" />
     <input type="text" name="phone" placeholder="Enter Phone Number here" />
     <input type="textarea" name="address" placeholder="Enter Address here" />
+    <input type="submit" />
   </form>
 </template>
