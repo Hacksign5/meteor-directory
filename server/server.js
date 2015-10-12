@@ -1,8 +1,3 @@
-Meteor.startup(function () {
-  // code to run on server at startup
-  Directory._ensureIndex({'loc.coordinates':'2dsphere'});
-});
-
 Meteor.methods({
   addItem: function (name, phone, address) {
 
