@@ -1,14 +1,16 @@
 <template name="directory">
   <h1>Directory</h1>
   <div><a href="{{pathFor 'newItem'}}">Add New Item</a></div>
-  <table>
-    <th>Name</th>
-    <th>Phone Number</th>
-    <th>Address</th>
-    {{#each directory}}
-      {{> dirtr}}
-    {{/each}}
-  </table>
+  <div class="tableWrapper">
+    <table>
+      <th>Name</th>
+      <th>Phone Number</th>
+      <th>Address</th>
+      {{#each directory}}
+        {{> dirtr}}
+      {{/each}}
+    </table>
+  </div>
 </template>
 
 <template name="dirtr">

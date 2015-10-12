@@ -1,5 +1,9 @@
 <template name="applicationLayout">
-  {{> yield "header"}}
-  {{> yield}}
-  {{> yield "footer"}}
+
+    {{> yield "header"}}
+    <main>
+      {{> yield}}
+    </main>
+    {{> yield "footer"}}
+
 </template>
