@@ -1,0 +1,49 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.page-wrap {
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  flex-direction: column;
+  background: #FFFFBF;
+  justify-content: space-around;
+ }
+
+.header {
+  padding: 1em;
+  width: 39em;
+  height: 2em;
+  margin-top: 0em;
+  align-content: space-around;
+
+  line-height: 2em;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: left;
+}
+
+.tableWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.tableWrapper th {
+  border: 0.175em solid black;
+  width: 14em;
+}
+
+
+.tableWrapper td {
+  border: 0.14em solid black;
+}
