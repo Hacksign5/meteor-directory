@@ -1,49 +1,60 @@
 body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
 }
 
 main {
-  flex: 1;
+	flex: 1;
 }
-
-.page-wrap {
-  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;      /* TWEENER - IE 10 */
-  display: -webkit-flex;     /* NEW - Chrome */
-  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
-  flex-direction: column;
-  background: #FFFFBF;
-  justify-content: space-around;
- }
 
 .header {
-  padding: 1em;
-  width: 39em;
-  height: 2em;
-  margin-top: 0em;
-  align-content: space-around;
+	padding: 1em;
+	width: 39em;
+	height: 2em;
+	margin-top: 0em;
+	align-content: space-around;
 
-  line-height: 2em;
-  color: white;
-  font-weight: bold;
-  font-size: 1.5em;
-  text-align: left;
+	line-height: 2em;
+	color: white;
+	font-weight: bold;
+	font-size: 1.5em;
+	text-align: left;
 }
 
-.tableWrapper {
-  display: flex;
-  justify-content: center;
+.flexcontainer {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	flex-direction: row;
 }
 
-.tableWrapper th {
-  border: 0.175em solid black;
-  width: 14em;
+.flexcontainer.column {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
+.flexcontainer.row {
+    -webkit-flex-direction: row;
+    flex-direction: row;
+}
+
+.flexcontainer.column.center, .flexcontainer.row.center {
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.flexcontainer th {
+	border: 0.175em solid black;
+	width: 14em;
 }
 
 
-.tableWrapper td {
-  border: 0.14em solid black;
+.flexcontainer td {
+	border: 0.14em solid black;
 }

@@ -1,31 +1,49 @@
 <template name="directory">
-  <h1>Directory</h1>
-  <div><a href="{{pathFor 'newItem'}}">Add New Item</a></div>
-  <div class="tableWrapper">
-    <table>
-      <th>Name</th>
-      <th>Phone Number</th>
-      <th>Address</th>
-      {{#each directory}}
-        {{> dirtr}}
-      {{/each}}
-    </table>
-  </div>
+	<h1>Directory</h1>
+	<div class="flexcontainer column center">
+		<div>
+			{{> newItem}}
+		</div>
+		<div>
+			<table>
+				<th>Name</th>
+				<th>Distance</th>
+				{{#each directory}}
+					{{> dirtr}}
+				{{/each}}
+			</table>
+		</div>
+	</div>
 </template>
 
 <template name="dirtr">
-  <tr>
-    <td>{{name}}</td>
-    <td>{{phone_number}}</td>
-    <td>{{address}}</td>
-  </tr>
+	<tr>
+		<td>{{name}}</td>
+		{{#if locationIsSet}}
+			<td>{{getDistance "mi"}} miles</td>
+		{{else}}
+			<td>Location not set</td>
+		{{/if}}
+	</tr>
 </template>
 
 <template name="newItem">
-  <form class="newItem">
-    <input type="text" name="name" placeholder="Enter name here" />
-    <input type="text" name="phone" placeholder="Enter Phone Number here" />
-    <input type="textarea" name="address" placeholder="Enter Address here" />
-    <input type="submit" />
-  </form>
+	<form class="newItem">
+		<input type="text" name="name" placeholder="Enter name here" />
+		<input type="text" name="phone" placeholder="Enter Phone Number here" />
+		<input type="textarea" name="address" placeholder="Enter Address here" />
+		<input type="submit" />
+	</form>
+</template>
+
+<template name="searchAddress">
+	<form class="searchAddress">
+		{{#if addressIsSet}}
+			<input type="text" name="address" placeholder="{{formattedAddress}}" />
+		{{else}}
+			<input type="text" name="address" placeholder="Enter address here" />
+		{{/if}}
+
+		<input type="submit" />
+	</form>
 </template>

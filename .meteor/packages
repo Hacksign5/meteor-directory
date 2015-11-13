@@ -24,3 +24,4 @@ iron:router
 dburles:google-maps
 mdg:geolocation
 aldeed:geocoder
+outatime:geolib
